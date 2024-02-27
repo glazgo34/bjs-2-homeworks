@@ -14,8 +14,18 @@ function solveEquation(a, b, c) {
   return arr;
 }
 
-let uravnenie = solveEquation(1, 5, -3);
-
 function calculateTotalMortgage(percent, contribution, amount, countMonths) {
-  
+  if (isNaN(contribution) || isNaN(percent) || isNaN(amount) || isNaN(countMonths)) {
+		return false;
+	}
+	
+	percent = percent/100/12;
+
+	let creditBody = amount - contribution;
+	let payPerMonth = creditBody * (percent + (percent / (((1 + percent)**countMonths) - 1)));
+	let totalPayment = payPerMonth * countMonths;
+
+	totalPayment = Number(totalPayment.toFixed(2));
+
+	return totalPayment;
 }
