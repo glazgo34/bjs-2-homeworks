@@ -37,7 +37,7 @@ class Triangle {
 function getTriangle(sideA, sideB, sideC) {
   try {
     return new Triangle(sideA, sideB, sideC);
-  } catch(error) {
+  } catch(err) {
       return {
         get perimeter() {
           return `Ошибка! Треугольник не существует`;
