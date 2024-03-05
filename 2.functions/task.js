@@ -4,11 +4,11 @@ function getArrayParams(...arr) {
 			sum = 0,
 			avg = 0;
 
-			for(let i = 0; i <arr.length; i++) {
+	for(let i = 0; i <arr.length; i++) {
 				sum = sum + arr[i];
-			}
+	}
 
-			avg = Number((sum/arr.length).toFixed(2));
+	avg = Number((sum/arr.length).toFixed(2));
   return { min: min, max: max, avg: avg };
 }
 
