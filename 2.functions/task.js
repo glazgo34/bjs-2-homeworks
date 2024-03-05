@@ -4,8 +4,8 @@ function getArrayParams(...arr) {
 			sum = 0,
 			avg = 0;
 
-	for(let i = 0; i <arr.length; i++) {
-				sum = sum + arr[i];
+	for(let index = 0; index <arr.length; index++) {
+				sum = sum + arr[index];
 	}
 
 	avg = Number((sum/arr.length).toFixed(2));
